@@ -36,6 +36,9 @@ jobs:
         - name: Current dir
           run: Get-Location
 
+        - name: PYTHONPATH
+          run: echo "$env:PYTHONPATH=$pwd\tmp" >> $env:GITHUB_ENV
+
         - name: Test
           run: python test.py
 
