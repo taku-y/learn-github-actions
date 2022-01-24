@@ -33,6 +33,9 @@ jobs:
             ls .
           shell: bash
 
+        - name: Current dir
+          run: Get-Location
+
         - name: Test
           run: python test.py
 
