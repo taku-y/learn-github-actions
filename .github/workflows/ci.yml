@@ -15,7 +15,7 @@ jobs:
         matrix:
           # os: [ubuntu-latest, windows-latest, macOS-latest]
           # os: [ubuntu-latest, windows-latest]
-          os: [ubuntu-latest]
+          os: [windows-latest]
           python-version: [3.7]
       steps:
         - uses: actions/checkout@v2
@@ -28,6 +28,7 @@ jobs:
 
         - name: Prepare MY_TEST
           run: echo "MY_TEST=abcde" >> $GITHUB_ENV
+          shell: bash
 
         - name: Test
           run: python test.py
